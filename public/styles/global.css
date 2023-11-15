@@ -1,0 +1,168 @@
+html,
+body {
+  height: 100%;
+  
+  margin: 0;
+  padding: 0;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  display: flex;
+}
+
+#woolpert-solar {
+  height: 100%;
+  width: 100%;
+
+  margin: auto;
+}
+
+.woolpert-solar {
+  position: relative;
+}
+
+.woolpert-solar-map {
+  height: 100%;
+}
+
+.woolpert-solar-form {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, .5);
+
+  display: none;
+}
+
+.woolpert-solar-form.active {
+  display: flex;
+}
+
+.woolpert-solar-form-input {
+  margin: auto;
+
+  padding: 5px;
+
+  min-width: 50%;
+
+  height: auto;
+
+  border-radius: 5px;
+
+  border: none;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.woolpert-solar-form-input:focus {
+  outline: none;
+}
+
+.woolpert-solar-form-label {
+  color: #FFF;
+
+  margin: auto;
+
+  font-weight: normal;
+}
+
+
+.woolpert-solar-panel {
+  background: #FFF;
+
+  margin: 10px 10px 0;
+  padding: 10px;
+
+  border-radius: 3px;
+
+  width: 200px;
+}
+
+.woolpert-solar-panel-slider {
+  width: 100%;
+}
+
+.woolpert-solar-panel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+}
+
+.woolpert-solar-panel-container {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  flex: 1 1 0%;
+}
+
+.woolpert-solar-panel-title {
+  margin: 0 auto;
+
+  font-weight: normal;
+}
+
+.woolpert-solar-panel-conic {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform: rotate(-135deg);
+
+  background: conic-gradient(rgb(232, 234, 237) 75%, transparent 0deg);
+}
+
+.woolpert-solar-panel-conic::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0px;
+
+  width: 68px;
+  height: 68px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(currentColor var(--progress), transparent 0);
+}
+
+.woolpert-solar-panel-conic-inner {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: white;
+
+  font-weight: bold;
+
+  text-align: center;
+
+  transform: rotate(135deg);
+
+  width: 60px;
+  height: 60px;
+}
